@@ -9,6 +9,8 @@ This directory mixes two kinds of documentation:
 
 - [Portfolio Case Study](./portfolio-case-study.md)
   Concise explanation of the business problem, the prototype, and what it demonstrates.
+- [Visual Gallery](./visual-gallery.md)
+  Real WhatsApp flow screenshots plus supporting identity and architecture visuals.
 - [WhatsApp Operator Flow](./whatsapp-operator-flow.md)
   Source of truth for the operator UX and deterministic navigation model.
 

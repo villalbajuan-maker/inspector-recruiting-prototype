@@ -18,19 +18,17 @@ Live demo touchpoints:
 
 Visual references:
 
-![WhatsApp Menu](./assets/whatsapp-menu.jpg)
-
-![WhatsApp Scheduled Interviews](./assets/whatsapp-scheduled.jpg)
-
-![WhatsApp Completed Interviews](./assets/whatsapp-completed.jpg)
-
-![WhatsApp Shortlist](./assets/whatsapp-shortlist.jpg)
-
-![WhatsApp Best Pick](./assets/whatsapp-best-pick.jpg)
-
-![WhatsApp Candidate Summary](./assets/whatsapp-summary.jpg)
-
 ![System Architecture](./assets/system-architecture.svg)
+
+Full visual set:
+
+- [Visual Gallery](./visual-gallery.md)
+- [WhatsApp Menu](./assets/whatsapp-menu.jpg)
+- [Scheduled Interviews](./assets/whatsapp-scheduled.jpg)
+- [Completed Interviews](./assets/whatsapp-completed.jpg)
+- [Hiring Shortlist](./assets/whatsapp-shortlist.jpg)
+- [Best Pick](./assets/whatsapp-best-pick.jpg)
+- [Candidate Summary](./assets/whatsapp-summary.jpg)
 
 ## The Business Need
 

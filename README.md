@@ -10,27 +10,23 @@ Try the WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
 
 ## Visual Walkthrough
 
-Hiring OS operator profile:
+Primary visuals:
 
 ![Hiring OS Operator Profile](docs/assets/hiringos-operator-profile.png)
-
-WhatsApp operator flow:
-
-![WhatsApp Menu](docs/assets/whatsapp-menu.jpg)
-
-![WhatsApp Scheduled Interviews](docs/assets/whatsapp-scheduled.jpg)
-
-![WhatsApp Completed Interviews](docs/assets/whatsapp-completed.jpg)
-
-![WhatsApp Shortlist](docs/assets/whatsapp-shortlist.jpg)
-
-![WhatsApp Best Pick](docs/assets/whatsapp-best-pick.jpg)
-
-![WhatsApp Candidate Summary](docs/assets/whatsapp-summary.jpg)
 
 System architecture:
 
 ![System Architecture](docs/assets/system-architecture.svg)
+
+Full screenshot gallery:
+
+- [Visual Gallery](docs/visual-gallery.md)
+- [WhatsApp Menu](docs/assets/whatsapp-menu.jpg)
+- [Scheduled Interviews](docs/assets/whatsapp-scheduled.jpg)
+- [Completed Interviews](docs/assets/whatsapp-completed.jpg)
+- [Hiring Shortlist](docs/assets/whatsapp-shortlist.jpg)
+- [Best Pick](docs/assets/whatsapp-best-pick.jpg)
+- [Candidate Summary](docs/assets/whatsapp-summary.jpg)
 
 ## What This Prototype Demonstrates
 
@@ -130,6 +126,7 @@ Backend secrets live in Supabase Edge Function configuration and are not stored 
 
 - [Project Docs](docs/README.md)
 - [Portfolio Case Study](docs/portfolio-case-study.md)
+- [Visual Gallery](docs/visual-gallery.md)
 - [WhatsApp Operator Flow](docs/whatsapp-operator-flow.md)
 - [WhatsApp Operator Refactor](docs/whatsapp-operator-refactor.md)
 - [WhatsApp Data Readiness](docs/whatsapp-data-readiness.md)
