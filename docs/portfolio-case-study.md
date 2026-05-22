@@ -18,7 +18,17 @@ Live demo touchpoints:
 
 Visual references:
 
-![WhatsApp Operator Preview](./assets/whatsapp-operator-preview.svg)
+![WhatsApp Menu](./assets/whatsapp-menu.jpg)
+
+![WhatsApp Scheduled Interviews](./assets/whatsapp-scheduled.jpg)
+
+![WhatsApp Completed Interviews](./assets/whatsapp-completed.jpg)
+
+![WhatsApp Shortlist](./assets/whatsapp-shortlist.jpg)
+
+![WhatsApp Best Pick](./assets/whatsapp-best-pick.jpg)
+
+![WhatsApp Candidate Summary](./assets/whatsapp-summary.jpg)
 
 ![System Architecture](./assets/system-architecture.svg)
 

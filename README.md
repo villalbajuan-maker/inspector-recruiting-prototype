@@ -14,9 +14,19 @@ Hiring OS operator profile:
 
 ![Hiring OS Operator Profile](docs/assets/hiringos-operator-profile.png)
 
-WhatsApp operator preview:
+WhatsApp operator flow:
 
-![WhatsApp Operator Preview](docs/assets/whatsapp-operator-preview.svg)
+![WhatsApp Menu](docs/assets/whatsapp-menu.jpg)
+
+![WhatsApp Scheduled Interviews](docs/assets/whatsapp-scheduled.jpg)
+
+![WhatsApp Completed Interviews](docs/assets/whatsapp-completed.jpg)
+
+![WhatsApp Shortlist](docs/assets/whatsapp-shortlist.jpg)
+
+![WhatsApp Best Pick](docs/assets/whatsapp-best-pick.jpg)
+
+![WhatsApp Candidate Summary](docs/assets/whatsapp-summary.jpg)
 
 System architecture:
 
