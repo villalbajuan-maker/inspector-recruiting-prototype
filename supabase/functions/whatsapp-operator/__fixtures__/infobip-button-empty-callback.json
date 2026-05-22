@@ -1,0 +1,12 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573009990006",
+      "to": "whatsapp:+19540000000",
+      "messageId": "button-empty-1",
+      "message": {
+        "type": "INTERACTIVE_BUTTON_REPLY"
+      }
+    }
+  ]
+}

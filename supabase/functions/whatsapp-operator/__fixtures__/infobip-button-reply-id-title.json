@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573009990005",
+      "to": "whatsapp:+19540000000",
+      "messageId": "button-1",
+      "message": {
+        "type": "INTERACTIVE_BUTTON_REPLY",
+        "interactive": {
+          "buttonReply": {
+            "id": "completed_today",
+            "title": "Completed"
+          }
+        }
+      }
+    }
+  ]
+}

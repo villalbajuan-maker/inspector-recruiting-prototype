@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573009990007",
+      "to": "whatsapp:+19540000000",
+      "messageId": "audio-1",
+      "message": {
+        "type": "AUDIO",
+        "content": {
+          "audio": {
+            "url": "https://media.example.test/audio/audio-note.m4a"
+          }
+        }
+      }
+    }
+  ]
+}

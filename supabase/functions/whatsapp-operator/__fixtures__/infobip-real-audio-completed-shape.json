@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573192509637",
+      "to": "whatsapp:+19540000000",
+      "integrationType": "WHATSAPP",
+      "receivedAt": "2026-05-22T21:20:57.000+0000",
+      "messageId": "real-audio-shape-1",
+      "pairedMessageId": "paired-message-1",
+      "callbackData": "whatsapp-operator",
+      "message": {
+        "url": "https://media.example.test/audio/real-audio.ogg",
+        "type": "AUDIO"
+      },
+      "contact": {
+        "name": "Operator"
+      },
+      "price": {
+        "pricePerMessage": 0,
+        "currency": "USD"
+      }
+    }
+  ],
+  "messageCount": 1,
+  "pendingMessageCount": 0
+}

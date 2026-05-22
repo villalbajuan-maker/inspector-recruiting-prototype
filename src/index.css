@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  overscroll-behavior-y: none;
+}
+
+.logo-banner-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-banner-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+
+.logo-banner-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4rem;
+  animation: infinite-scroll 40s linear infinite;
+  will-change: transform;
+  padding-right: 4rem;
+}
+
+.logo-banner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.logo-banner-item {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-banner-content {
+    gap: 3rem;
+    padding-right: 3rem;
+  }
+
+  .logo-banner-item {
+    height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-banner-content {
+    gap: 2rem;
+    padding-right: 2rem;
+  }
+
+  .logo-banner-item {
+    height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-banner-content {
+    animation: none;
+  }
+
+  .logo-banner-track {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+
+  .logo-banner-content:not(:first-child) {
+    display: none;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  will-change: auto;
+}
+
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stagger-1,
+  .stagger-2,
+  .stagger-3,
+  .stagger-4 {
+    transition-delay: 0s;
+  }
+}
+
+.textured-section {
+  background-color: #f9fafb;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(71, 85, 105, 0.08) 0px,
+      rgba(71, 85, 105, 0.08) 2px,
+      transparent 2px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(71, 85, 105, 0.08) 0px,
+      rgba(71, 85, 105, 0.08) 2px,
+      transparent 2px,
+      transparent 60px
+    ),
+    radial-gradient(
+      ellipse at 20% 30%,
+      rgba(71, 85, 105, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 70%,
+      rgba(71, 85, 105, 0.10) 0%,
+      transparent 50%
+    );
+  background-size: 60px 60px, 60px 60px, 100% 100%, 100% 100%;
+  animation: parallax-move 15s ease-in-out infinite;
+  will-change: background-position;
+}
+
+@keyframes parallax-move {
+  0%, 100% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 0 -80px, 0 -80px, 0 40px, 0 -40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .textured-section {
+    animation: none;
+  }
+}

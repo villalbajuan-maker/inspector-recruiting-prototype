@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573192509637",
+      "to": "whatsapp:+19540000000",
+      "integrationType": "WHATSAPP",
+      "receivedAt": "2026-05-22T21:35:25.000+0000",
+      "messageId": "real-button-completed-1",
+      "pairedMessageId": "button-menu-1",
+      "callbackData": "whatsapp-operator",
+      "message": {
+        "id": "completed_today",
+        "title": "Completed",
+        "context": {
+          "from": "whatsapp:+19540000000",
+          "id": "button-menu-1"
+        },
+        "type": "INTERACTIVE_BUTTON_REPLY"
+      },
+      "contact": {
+        "name": "Operator"
+      },
+      "price": {
+        "pricePerMessage": 0,
+        "currency": "USD"
+      }
+    }
+  ],
+  "messageCount": 1,
+  "pendingMessageCount": 0
+}

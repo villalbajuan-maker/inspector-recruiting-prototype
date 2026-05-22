@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573009990001",
+      "to": "whatsapp:+19540000000",
+      "messageId": "text-hello-1",
+      "message": {
+        "type": "TEXT",
+        "text": "hello"
+      }
+    }
+  ]
+}

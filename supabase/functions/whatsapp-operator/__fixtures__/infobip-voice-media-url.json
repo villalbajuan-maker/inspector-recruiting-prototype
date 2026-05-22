@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "from": "whatsapp:+573009990008",
+      "to": "whatsapp:+19540000000",
+      "messageId": "voice-2",
+      "message": {
+        "type": "VOICE",
+        "mediaUrl": "https://media.example.test/audio/voice-media.ogg"
+      }
+    }
+  ]
+}
