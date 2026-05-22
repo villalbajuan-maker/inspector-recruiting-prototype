@@ -4,6 +4,8 @@ Functional recruiting prototype for field inspector hiring: a landing page, inst
 
 Live prototype: [home-insp-inter.vercel.app](https://home-insp-inter.vercel.app/)
 
+Try the WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
+
 ![Inspector Recruiting Preview](public/inspector-recruiting-og-v2.png)
 
 ## What This Prototype Demonstrates
@@ -39,6 +41,7 @@ Instead of requiring a full internal dashboard from day one, the prototype prove
 ### Operator side
 
 - WhatsApp menu for scheduled interviews, completed interviews, and shortlist review.
+- Public demo line available at [`+57 314 344 9324`](https://wa.me/573143449324).
 - Deterministic list views based on database state.
 - Candidate selection by name, index, or phone last four digits.
 - LLM-assisted summaries, risks, phone lookup, follow-up guidance, and candidate Q&A.

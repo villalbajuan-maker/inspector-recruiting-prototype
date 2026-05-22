@@ -11,6 +11,11 @@ This prototype demonstrates a recruiting workflow for field inspectors that comb
 
 The result is a commercially believable prototype that proves both the candidate journey and the internal operations layer.
 
+Live demo touchpoints:
+
+- Landing page: [home-insp-inter.vercel.app](https://home-insp-inter.vercel.app/)
+- WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
+
 ## The Business Need
 
 A hiring team may want to validate whether a niche recruiting flow can work before building a full platform. In this case, the questions were:

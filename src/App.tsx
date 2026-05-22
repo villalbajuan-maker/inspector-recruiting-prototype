@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Briefcase, FileText, Shield, Ban, TrendingUp, Shuffle, ShieldCheck, AlertCircle } from 'lucide-react';
+import { Briefcase, FileText, Shield, Ban, TrendingUp, Shuffle, ShieldCheck, AlertCircle, MessageCircle } from 'lucide-react';
 import ConversionModal from './components/ConversionModal';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
@@ -56,6 +56,18 @@ function App() {
           >
             Schedule a call instead
           </button>
+
+          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[#475569]">
+            <MessageCircle size={16} strokeWidth={1.75} />
+            <a
+              href="https://wa.me/573143449324"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-[#334155] transition-colors"
+            >
+              Try the WhatsApp operator: +57 314 344 9324
+            </a>
+          </div>
         </div>
       </section>
 
