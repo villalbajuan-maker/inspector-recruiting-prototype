@@ -16,6 +16,12 @@ Live demo touchpoints:
 - Landing page: [home-insp-inter.vercel.app](https://home-insp-inter.vercel.app/)
 - WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
 
+Visual references:
+
+![WhatsApp Operator Preview](./assets/whatsapp-operator-preview.svg)
+
+![System Architecture](./assets/system-architecture.svg)
+
 ## The Business Need
 
 A hiring team may want to validate whether a niche recruiting flow can work before building a full platform. In this case, the questions were:

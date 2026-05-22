@@ -8,6 +8,20 @@ Try the WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
 
 ![Inspector Recruiting Preview](public/inspector-recruiting-og-v2.png)
 
+## Visual Walkthrough
+
+Hiring OS operator profile:
+
+![Hiring OS Operator Profile](docs/assets/hiringos-operator-profile.png)
+
+WhatsApp operator preview:
+
+![WhatsApp Operator Preview](docs/assets/whatsapp-operator-preview.svg)
+
+System architecture:
+
+![System Architecture](docs/assets/system-architecture.svg)
+
 ## What This Prototype Demonstrates
 
 - A public-facing recruiting funnel built for conversion, not just presentation.
