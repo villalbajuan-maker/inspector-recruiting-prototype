@@ -14,6 +14,10 @@ Primary visuals:
 
 ![Hiring OS Operator Profile](docs/assets/hiringos-operator-profile.png)
 
+WhatsApp operator flow:
+
+![WhatsApp Operator Collage](docs/assets/whatsapp-collage.jpg)
+
 System architecture:
 
 ![System Architecture](docs/assets/system-architecture.svg)
