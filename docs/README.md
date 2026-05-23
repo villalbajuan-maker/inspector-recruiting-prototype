@@ -1,26 +1,22 @@
 # Project Docs
 
-This directory mixes two kinds of documentation:
+This documentation set is organized around the public story of the prototype first, and internal execution notes second.
 
-- portfolio-facing project context
-- production-oriented implementation notes used during delivery
+## Public Reading Path
 
-## Recommended Reading
+- [Portfolio Case Study](./portfolio-case-study.md)  
+  Business framing, product validation thesis, architecture decisions, lessons learned, and future evolution.
 
-- [Portfolio Case Study](./portfolio-case-study.md)
-  Concise explanation of the business problem, the prototype, and what it demonstrates.
-- [Hiring Intelligence](./hiring-intelligence.md)
-  Explanation of the track-aware evaluation layer, prompting strategy, and structured hiring signals.
-- [Visual Gallery](./visual-gallery.md)
-  Real WhatsApp flow screenshots plus supporting identity and architecture visuals.
-- [WhatsApp Operator Flow](./whatsapp-operator-flow.md)
-  Source of truth for the operator UX and deterministic navigation model.
+- [Hiring Intelligence](./hiring-intelligence.md)  
+  Track-aware evaluation strategy, prompting model, structured intelligence persistence, and decision routing.
 
-## Engineering Notes
+- [Visual Gallery](./visual-gallery.md)  
+  Real screenshots and supporting visuals for the landing flow, WhatsApp operator flow, and system presentation.
 
-- [WhatsApp Operator Refactor](./whatsapp-operator-refactor.md)
-  Stabilization plan and implementation phases for the WhatsApp operator.
-- [WhatsApp Data Readiness](./whatsapp-data-readiness.md)
-  Notes about data quality, visibility, and what the operator can reliably surface.
+- [WhatsApp Operator Flow](./whatsapp-operator-flow.md)  
+  Product-facing explanation of the deterministic WhatsApp interaction model.
 
-These docs were written to keep execution grounded during development. They are intentionally practical and reflect real build decisions, tradeoffs, and debugging work.
+## Internal Notes
+
+- [Internal Docs](./internal/README.md)  
+  Historical implementation notes, refactor planning, and execution-grounding documents kept for engineering memory.

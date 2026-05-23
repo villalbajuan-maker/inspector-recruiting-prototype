@@ -200,6 +200,47 @@ It shows the ability to design:
 
 That is a more serious product capability than “chat with an LLM.” It is domain-shaped decision support.
 
+## Future Evolution
+
+The most interesting next step is not broader UI. It is broader interview intelligence.
+
+### Multi-stage interview systems
+
+- first-screen interviews
+- qualification interviews
+- late-stage readiness interviews
+- pre-hire decision-support interviews
+
+### Pressure-based interview models
+
+- stress interviews for pressure-sensitive roles
+- escalation handling scenarios
+- boundary-testing conversations
+- response-under-pressure scoring
+
+### Track-specific intelligence families
+
+- inspection
+- trades
+- sales
+- management
+- additional role families with their own prompt logic and decision criteria
+
+### Configurable interview control profiles
+
+- pressure level
+- follow-up style
+- expected depth
+- focus-area weighting
+
+### Cross-stage candidate memory
+
+- compare a candidate across multiple interviews
+- identify contradictions between stages
+- measure consistency, trainability, and pressure behavior over time
+
+That is the direction in which this architecture becomes a broader hiring intelligence system rather than a single recruiting prototype.
+
 ## Current Truth
 
 To describe the repo honestly:

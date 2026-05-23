@@ -1,6 +1,16 @@
 # Inspector Recruiting Prototype
 
-Functional recruiting prototype for field inspector hiring: a landing page, instant or scheduled voice interviews, interview persistence in Supabase, and a WhatsApp operator that lets a hiring lead review interviews without opening an internal dashboard.
+This repository demonstrates the ability to build AI-powered product validation systems with real architecture, domain-shaped business logic, and operational usability in a very short time frame.
+
+The prototype validates a recruiting workflow for field inspectors through:
+
+- a conversion-focused public landing page
+- immediate or scheduled AI voice interviews
+- structured interview persistence in Supabase
+- track-aware hiring intelligence
+- a WhatsApp operator that gives hiring leads operational visibility without requiring an internal dashboard
+
+This is not presented as a finished recruiting product. It is presented as a functional prototype designed to prove whether a workflow, operating model, and intelligence layer are worth turning into a fuller platform.
 
 Live prototype: [home-insp-inter.vercel.app](https://home-insp-inter.vercel.app/)
 
@@ -10,19 +20,13 @@ Try the WhatsApp operator: [`+57 314 344 9324`](https://wa.me/573143449324)
 
 ## Visual Walkthrough
 
-Primary visuals:
-
 ![Hiring OS Operator Profile](docs/assets/hiringos-operator-profile.png)
-
-WhatsApp operator flow:
 
 ![WhatsApp Operator Collage](docs/assets/whatsapp-collage.jpg)
 
-System architecture:
-
 ![System Architecture](docs/assets/system-architecture.svg)
 
-Full screenshot gallery:
+Additional visuals:
 
 - [Visual Gallery](docs/visual-gallery.md)
 - [WhatsApp Menu](docs/assets/whatsapp-menu.jpg)
@@ -32,96 +36,181 @@ Full screenshot gallery:
 - [Best Pick](docs/assets/whatsapp-best-pick.jpg)
 - [Candidate Summary](docs/assets/whatsapp-summary.jpg)
 
-## What This Prototype Demonstrates
+## What This Prototype Proves
 
-- A public-facing recruiting funnel built for conversion, not just presentation.
-- Voice interview intake with immediate or scheduled execution.
-- Persistence of interview sessions and downstream evaluation context in Supabase.
-- Track-aware hiring intelligence with structured interview evaluation and decision routing.
-- A deterministic WhatsApp operations interface layered with LLM-assisted summaries and Q&A.
-- End-to-end orchestration across Vercel, Supabase Edge Functions, Infobip, Retell, and OpenAI.
+- A product idea can move from concept to working operational system in roughly 48 hours.
+- AI becomes more useful when it is shaped by workflow rules, role logic, and operational constraints.
+- A prototype does not need a full internal platform to validate value; an operational surface like WhatsApp can be enough.
+- Deterministic orchestration plus peripheral LLM usage is a stronger pattern than LLM-first workflow design.
+- Structured persistence turns a demo into a reusable product foundation.
 
-This repository represents the kind of fast-turnaround prototype I build for MVP, SaaS discovery, and AI workflow validation engagements. The goal is not to present a fully generalized product, but a working, commercially credible prototype that proves a business flow in 48-72 hours.
+## Business Problem
 
-## Problem It Solves
+Hiring teams often need to answer a product question before they need to answer a software-scaling question.
 
-Hiring teams often need to validate a recruiting workflow before investing in a full product. In this prototype, the workflow is:
+In this case, the product question was:
 
-1. Attract inspector candidates through a focused landing page.
-2. Let candidates start now or schedule a call.
-3. Persist interview data and evaluation results.
-4. Give operators a lightweight WhatsApp interface to review scheduled interviews, completed interviews, and candidate outcomes in near real time.
-5. Apply role-specific hiring intelligence instead of treating all interviews as the same generic evaluation problem.
+Can we validate an inspector recruiting workflow that attracts candidates, runs voice interviews, persists evaluation output, and gives operators a usable operational view in real time?
 
-Instead of requiring a full internal dashboard from day one, the prototype proves that operational visibility can happen inside an everyday channel like WhatsApp.
+Instead of investing first in a full recruiting platform, this prototype validates the business flow directly:
 
-## Core Experience
+1. attract candidates through a focused landing page
+2. let candidates start now or schedule later
+3. execute and persist voice interviews
+4. evaluate candidates through role-shaped hiring intelligence
+5. let operators inspect the workflow through WhatsApp
 
-### Candidate side
+## What Was Built
 
-- Landing page tailored to inspector recruiting.
-- Guided intake modal for `call_now` or `schedule_call`.
-- Interview session creation in Supabase.
-- Retell-powered outbound interview call.
+### Candidate acquisition and intake
 
-### Operator side
+- Inspector recruiting landing page
+- Guided modal for `call_now` and `schedule_call`
+- Candidate and interview session creation in Supabase
 
-- WhatsApp menu for scheduled interviews, completed interviews, and shortlist review.
-- Public demo line available at [`+57 314 344 9324`](https://wa.me/573143449324).
-- Deterministic list views based on database state.
-- Candidate selection by name, index, or phone last four digits.
-- LLM-assisted summaries, risks, phone lookup, follow-up guidance, and candidate Q&A.
-- Voice note support for operator queries.
+### Voice interview execution
 
-### Hiring intelligence side
+- Immediate call dispatch for `call_now`
+- Scheduled dispatch path for `schedule_call`
+- Outbound interview execution through Retell
+- Cron-based due interview promotion using `pg_cron + pg_net`
 
-- Interview processing pipeline that extracts structured candidate data from transcript output.
-- Inspection-track intelligence builder with explicit decision criteria for neutrality, pressure handling, operational discipline, and trainability.
-- Geographic coverage scoring based on base ZIP, travel limit, and active coverage zones.
-- Structured persistence into both `candidate_intelligence` and `interview_session`.
-- Architecture prepared for multiple hiring tracks, with current live implementation centered on the inspection path.
+### Hiring operations surface
+
+- WhatsApp operator with deterministic menus and lists
+- Scheduled interviews, completed interviews, shortlist, best pick, and follow-up flows
+- Candidate selection by name, index, or phone digits
+- Voice note support for operator queries
+
+### Hiring intelligence layer
+
+- Transcript extraction and structured interview interpretation
+- Inspection-specific evaluator for neutral-inspector fit
+- Geographic reach and coverage scoring based on ZIP and travel limit
+- Structured persistence into `candidate_intelligence` and `interview_session`
+- Architecture prepared for multiple hiring tracks and multiple evaluation paths
+
+## Why The Intelligence Layer Matters
+
+This prototype is not only a workflow shell around APIs.
+
+Its differentiator is that interview intelligence is treated as domain logic.
+
+The current live implementation centers on the **inspection** hiring track, where evaluation is shaped around:
+
+- neutrality
+- language boundaries
+- pressure handling
+- operational discipline
+- trainability
+
+That matters because the product is not asking, “Is this a good candidate in general?”
+
+It is asking, “Is this the right kind of candidate for this specific role, under this specific hiring logic?”
+
+The repo also shows a broader architecture prepared for additional hiring paths such as:
+
+- trades
+- sales
+- management
+
+and for evaluation models driven by `role_truth`, focus areas, pressure level, follow-up style, and depth expectation.
+
+## Architecture Principles
+
+These are the decisions that make the prototype useful rather than theatrical.
+
+- **Determinism owns workflow state**  
+  Lists, selection, navigation, and factual responses are code- and database-driven.
+
+- **The LLM sits at the edge**  
+  It is used for transcription, synthesis, comparison, and grounded Q&A, not for inventing workflow facts.
+
+- **One system of record serves multiple surfaces**  
+  Candidate flow, scheduled dispatch, completed interview visibility, and operator reporting all sit on shared persisted state.
+
+- **Track-aware intelligence beats generic AI summaries**  
+  Role-specific prompts and schemas create more valuable outputs than generic “candidate summaries.”
+
+- **Prototype speed does not require architecture shortcuts**  
+  Fast delivery is more useful when the prototype is built like a real system, not like a disposable mockup.
+
+## What We Learned
+
+- **Product validation compresses well when channels are chosen deliberately.**  
+  For this workflow, WhatsApp is a strong operational surface because it lowers the cost of adoption for the hiring lead.
+
+- **The combination of deterministic orchestration and peripheral LLM usage is highly reliable.**  
+  It reduces ambiguity, keeps list and state responses honest, and still allows AI to add value where language actually matters.
+
+- **AI evaluation becomes more credible when it is constrained by role logic.**  
+  The inspection track works because the evaluator is not generic; it is strict, bounded, and explicitly shaped by the role.
+
+- **Structured persistence is what separates a demo from a product foundation.**  
+  Saving transcript, intelligence, scheduling state, and operator state in one system makes downstream features easier to build.
+
+- **A meaningful prototype can validate operations, not just interface.**  
+  The value is not only in the landing page or the chatbot. It is in proving that the workflow can actually be run.
+
+## What Comes Next
+
+The natural expansion of this system is not “more screens.” It is deeper hiring intelligence.
+
+### Multi-stage interview intelligence
+
+- first-screen interviews
+- qualification interviews
+- late-stage readiness interviews
+- final-stage operational fit interviews
+
+### Pressure-based interview models
+
+- stress interviews for pressure-sensitive roles
+- escalation handling scenarios
+- boundary-testing interviews
+- response-under-pressure evaluation
+
+### Multi-track hiring paths
+
+- inspection
+- trades
+- sales
+- management
+- other role-specific recruiting tracks
+
+### Configurable interview control profiles
+
+- pressure level
+- follow-up style
+- expected depth
+- focus-area weighting
+
+### Cross-stage candidate memory
+
+- compare candidate performance across stages
+- detect contradictions between interviews
+- track improvement, consistency, and risk over time
+
+This is where the prototype becomes a hiring intelligence platform rather than a single recruiting flow.
 
 ## Stack
 
-- `React + Vite + TypeScript` for the landing experience
-- `Tailwind CSS` for UI styling
-- `Supabase` for database, Edge Functions, and orchestration
-- `Retell` for outbound interview calls
-- `OpenAI` for transcription and conversational summarization
-- `Infobip` for WhatsApp transport
-- `Vercel` for frontend deployment
-- `pg_cron + pg_net` for scheduled interview dispatch
+- `React + Vite + TypeScript`
+- `Tailwind CSS`
+- `Supabase`
+- `Retell`
+- `OpenAI`
+- `Infobip`
+- `Vercel`
+- `pg_cron + pg_net`
 
-## Architecture Snapshot
+## Documentation Map
 
-- `src/`
-  Candidate-facing landing page and intake modal
-- `supabase/functions/intake-inspection`
-  Creates candidate and interview session records
-- `supabase/functions/start-interview-call`
-  Starts live or due scheduled outbound calls
-- `supabase/functions/retell-webhook`
-  Persists completed interview data from the call provider
-- `supabase/functions/build-inspection-intelligence`
-  Produces structured inspection-track intelligence from transcripts
-- `supabase/functions/write-intelligence`
-  Persists intelligence and updates candidate routing state
-- `supabase/functions/run-evaluation`
-  General role-truth evaluation path using focus areas and interview controls
-- `supabase/functions/whatsapp-operator`
-  Handles inbound WhatsApp messages and operator responses
-- `supabase/functions/_shared/hiring-operator-orchestrator*.ts`
-  Deterministic operator flow, list building, selection, and grounded Q&A
-- `supabase/functions/dispatch-scheduled-interviews`
-  Cron target that converts due scheduled interviews into live calls
-
-## Repo Highlights
-
-- Production-oriented engineering notes are preserved in `docs/`.
-- The WhatsApp operator was designed around deterministic navigation first, with the LLM used at the edges for report synthesis and grounded candidate questions.
-- Scheduled interviews are no longer mock-driven in the operator flow; they come from real `interview_session` records.
-- A database cron job can dispatch due scheduled interviews automatically without a separate scheduler service.
-- The intelligence layer is role-shaped: the inspection path uses a strict evaluator for neutral inspector fit, while the broader architecture is prepared for additional hiring tracks and configurable evaluation rules.
+- [Project Docs](docs/README.md)
+- [Portfolio Case Study](docs/portfolio-case-study.md)
+- [Hiring Intelligence](docs/hiring-intelligence.md)
+- [Visual Gallery](docs/visual-gallery.md)
+- [WhatsApp Operator Flow](docs/whatsapp-operator-flow.md)
 
 ## Local Development
 
@@ -142,25 +231,3 @@ Then set:
 - `VITE_SUPABASE_ANON_KEY`
 
 Backend secrets live in Supabase Edge Function configuration and are not stored in this repository.
-
-## Documentation Map
-
-- [Project Docs](docs/README.md)
-- [Portfolio Case Study](docs/portfolio-case-study.md)
-- [Hiring Intelligence](docs/hiring-intelligence.md)
-- [Visual Gallery](docs/visual-gallery.md)
-- [WhatsApp Operator Flow](docs/whatsapp-operator-flow.md)
-- [WhatsApp Operator Refactor](docs/whatsapp-operator-refactor.md)
-- [WhatsApp Data Readiness](docs/whatsapp-data-readiness.md)
-
-## Prototype Scope
-
-This project should be understood as a functional prototype, not a finished hiring product. It is intentionally optimized for:
-
-- workflow validation
-- stakeholder demos
-- systems integration proof
-- commercial storytelling
-- fast iteration toward an MVP
-
-It is a strong example of the kind of vertical prototype that can later grow into a production SaaS or an internal operations tool.

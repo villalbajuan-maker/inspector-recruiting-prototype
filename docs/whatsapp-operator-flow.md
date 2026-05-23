@@ -1,7 +1,5 @@
 # WhatsApp Operator Flow
 
-Implementation stabilization plan: see `docs/whatsapp-operator-refactor.md`.
-
 ## Purpose
 
 The WhatsApp operator is a lightweight operational console for hiring interviews. It should help an operator answer three questions without opening HiringOS:
