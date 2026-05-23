@@ -7,6 +7,7 @@ This prototype demonstrates a recruiting workflow for field inspectors that comb
 - a focused landing page
 - immediate or scheduled interview calls
 - persisted interview and evaluation data
+- track-aware hiring intelligence
 - a WhatsApp-based operator console
 
 The result is a commercially believable prototype that proves both the candidate journey and the internal operations layer.
@@ -46,6 +47,8 @@ A hiring team may want to validate whether a niche recruiting flow can work befo
 - Supabase persistence for candidate and interview records
 - Outbound interview initiation through Retell
 - Interview completion pipeline into structured intelligence
+- Inspection-specific evaluation logic for neutral-inspector fit
+- Architecture prepared for multiple hiring tracks and role-shaped evaluation paths
 - WhatsApp operator with deterministic menus and grounded candidate reporting
 - Automatic dispatch path for due scheduled interviews
 
@@ -58,6 +61,7 @@ It also demonstrates a pattern that is highly reusable:
 - public funnel
 - structured intake
 - AI-assisted workflow
+- domain-specific decision intelligence
 - operational visibility in a familiar channel
 
 ## Technical Decisions That Matter
@@ -66,6 +70,8 @@ It also demonstrates a pattern that is highly reusable:
 - The LLM is used for summarization and grounded Q&A, not for inventing workflow state.
 - Scheduled interviews are persisted in the same system of record as immediate interviews.
 - Cron-triggered interview dispatch is handled inside Supabase instead of adding another infrastructure service.
+- Interview evaluation is not generic: the inspection path uses a role-specific prompt and structured intelligence schema designed around neutrality, pressure handling, and operational discipline.
+- The codebase already contains the shape of a broader multi-track hiring system, with routing prepared for inspection, trades, sales, and management paths.
 
 ## What This Shows About The Build Style
 

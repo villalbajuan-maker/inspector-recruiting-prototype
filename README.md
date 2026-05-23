@@ -37,6 +37,7 @@ Full screenshot gallery:
 - A public-facing recruiting funnel built for conversion, not just presentation.
 - Voice interview intake with immediate or scheduled execution.
 - Persistence of interview sessions and downstream evaluation context in Supabase.
+- Track-aware hiring intelligence with structured interview evaluation and decision routing.
 - A deterministic WhatsApp operations interface layered with LLM-assisted summaries and Q&A.
 - End-to-end orchestration across Vercel, Supabase Edge Functions, Infobip, Retell, and OpenAI.
 
@@ -50,6 +51,7 @@ Hiring teams often need to validate a recruiting workflow before investing in a 
 2. Let candidates start now or schedule a call.
 3. Persist interview data and evaluation results.
 4. Give operators a lightweight WhatsApp interface to review scheduled interviews, completed interviews, and candidate outcomes in near real time.
+5. Apply role-specific hiring intelligence instead of treating all interviews as the same generic evaluation problem.
 
 Instead of requiring a full internal dashboard from day one, the prototype proves that operational visibility can happen inside an everyday channel like WhatsApp.
 
@@ -70,6 +72,14 @@ Instead of requiring a full internal dashboard from day one, the prototype prove
 - Candidate selection by name, index, or phone last four digits.
 - LLM-assisted summaries, risks, phone lookup, follow-up guidance, and candidate Q&A.
 - Voice note support for operator queries.
+
+### Hiring intelligence side
+
+- Interview processing pipeline that extracts structured candidate data from transcript output.
+- Inspection-track intelligence builder with explicit decision criteria for neutrality, pressure handling, operational discipline, and trainability.
+- Geographic coverage scoring based on base ZIP, travel limit, and active coverage zones.
+- Structured persistence into both `candidate_intelligence` and `interview_session`.
+- Architecture prepared for multiple hiring tracks, with current live implementation centered on the inspection path.
 
 ## Stack
 
@@ -92,6 +102,12 @@ Instead of requiring a full internal dashboard from day one, the prototype prove
   Starts live or due scheduled outbound calls
 - `supabase/functions/retell-webhook`
   Persists completed interview data from the call provider
+- `supabase/functions/build-inspection-intelligence`
+  Produces structured inspection-track intelligence from transcripts
+- `supabase/functions/write-intelligence`
+  Persists intelligence and updates candidate routing state
+- `supabase/functions/run-evaluation`
+  General role-truth evaluation path using focus areas and interview controls
 - `supabase/functions/whatsapp-operator`
   Handles inbound WhatsApp messages and operator responses
 - `supabase/functions/_shared/hiring-operator-orchestrator*.ts`
@@ -105,6 +121,7 @@ Instead of requiring a full internal dashboard from day one, the prototype prove
 - The WhatsApp operator was designed around deterministic navigation first, with the LLM used at the edges for report synthesis and grounded candidate questions.
 - Scheduled interviews are no longer mock-driven in the operator flow; they come from real `interview_session` records.
 - A database cron job can dispatch due scheduled interviews automatically without a separate scheduler service.
+- The intelligence layer is role-shaped: the inspection path uses a strict evaluator for neutral inspector fit, while the broader architecture is prepared for additional hiring tracks and configurable evaluation rules.
 
 ## Local Development
 
@@ -130,6 +147,7 @@ Backend secrets live in Supabase Edge Function configuration and are not stored 
 
 - [Project Docs](docs/README.md)
 - [Portfolio Case Study](docs/portfolio-case-study.md)
+- [Hiring Intelligence](docs/hiring-intelligence.md)
 - [Visual Gallery](docs/visual-gallery.md)
 - [WhatsApp Operator Flow](docs/whatsapp-operator-flow.md)
 - [WhatsApp Operator Refactor](docs/whatsapp-operator-refactor.md)
