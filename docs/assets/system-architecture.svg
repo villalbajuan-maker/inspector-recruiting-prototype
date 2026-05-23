@@ -1,65 +1,205 @@
-<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1600" height="980" fill="#0B1220"/>
-  <rect x="48" y="48" width="1504" height="884" rx="28" fill="#101A2D" stroke="#22314D"/>
-  <text x="92" y="120" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Inspector Recruiting Prototype</text>
-  <text x="92" y="160" fill="#9FB0C9" font-family="Arial, Helvetica, sans-serif" font-size="20">Architecture map of the live funnel, voice interview pipeline, and WhatsApp operator workflow.</text>
+<svg width="1800" height="1220" viewBox="0 0 1800 1220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: 700 38px Arial, Helvetica, sans-serif; fill: #F8FAFC; }
+      .subtitle { font: 400 19px Arial, Helvetica, sans-serif; fill: #9FB0C9; }
+      .section { font: 700 22px Arial, Helvetica, sans-serif; fill: #E2E8F0; letter-spacing: 0; }
+      .cardTitle { font: 700 22px Arial, Helvetica, sans-serif; fill: #F8FAFC; }
+      .cardSub { font: 600 16px Arial, Helvetica, sans-serif; fill: #7DD3FC; }
+      .body { font: 400 16px Arial, Helvetica, sans-serif; fill: #D6E1F2; }
+      .small { font: 400 14px Arial, Helvetica, sans-serif; fill: #B7C6DA; }
+      .label { font: 700 14px Arial, Helvetica, sans-serif; fill: #0F172A; }
+      .legend { font: 600 14px Arial, Helvetica, sans-serif; fill: #D6E1F2; }
+    </style>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#60A5FA"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#34D399"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrow-slate" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
 
-  <rect x="92" y="224" width="300" height="180" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="122" y="276" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Candidate Touchpoint</text>
-  <text x="122" y="322" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Landing page on Vercel</text>
-  <text x="122" y="356" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Start now or schedule later</text>
-  <text x="122" y="390" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Public demo experience</text>
+  <rect width="1800" height="1220" fill="#0B1220"/>
+  <rect x="40" y="40" width="1720" height="1140" rx="28" fill="#101827" stroke="#1F2A3D"/>
 
-  <rect x="92" y="472" width="300" height="180" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="122" y="524" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Operator Touchpoint</text>
-  <text x="122" y="570" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">WhatsApp via Infobip</text>
-  <text x="122" y="604" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Deterministic menu + lists</text>
-  <text x="122" y="638" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Grounded Q&amp;A on interviews</text>
+  <text x="88" y="108" class="title">Inspector Recruiting Prototype - System Architecture</text>
+  <text x="88" y="142" class="subtitle">Operational architecture for landing intake, outbound voice interviews, scheduled dispatch, intelligence persistence, and WhatsApp-based recruiting operations.</text>
 
-  <rect x="474" y="224" width="332" height="428" rx="22" fill="#16263E" stroke="#31517E"/>
-  <text x="506" y="276" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Supabase Core</text>
-  <text x="506" y="322" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Database</text>
-  <text x="506" y="356" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• candidate</text>
-  <text x="506" y="390" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• interview_session</text>
-  <text x="506" y="424" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• evaluation / intelligence</text>
-  <text x="506" y="478" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Edge Functions</text>
-  <text x="506" y="512" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• intake-inspection</text>
-  <text x="506" y="546" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• start-interview-call</text>
-  <text x="506" y="580" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• retell-webhook</text>
-  <text x="506" y="614" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">• whatsapp-operator</text>
+  <rect x="1230" y="72" width="474" height="110" rx="16" fill="#0F172A" stroke="#243247"/>
+  <text x="1262" y="104" class="section">Legend</text>
+  <line x1="1262" y1="130" x2="1322" y2="130" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <text x="1338" y="135" class="legend">Synchronous request / function invocation</text>
+  <line x1="1262" y1="156" x2="1322" y2="156" stroke="#34D399" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow-green)"/>
+  <text x="1338" y="161" class="legend">Asynchronous callback / provider webhook</text>
+  <line x1="1262" y1="182" x2="1322" y2="182" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+  <text x="1338" y="187" class="legend">AI enrichment / scheduled dispatch path</text>
 
-  <rect x="888" y="224" width="292" height="180" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="918" y="276" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Retell</text>
-  <text x="918" y="322" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Outbound interview calls</text>
-  <text x="918" y="356" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Call metadata and transcript</text>
-  <text x="918" y="390" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Webhook completion back to Supabase</text>
+  <rect x="76" y="212" width="312" height="920" rx="22" fill="#0F172A" stroke="#243247"/>
+  <text x="104" y="250" class="section">Experience Layer</text>
 
-  <rect x="888" y="472" width="292" height="180" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="918" y="524" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">OpenAI</text>
-  <text x="918" y="570" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Voice note transcription</text>
-  <text x="918" y="604" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Interview summaries</text>
-  <text x="918" y="638" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Grounded candidate Q&amp;A</text>
+  <rect x="104" y="286" width="256" height="204" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="128" y="324" class="cardTitle">Public Recruiting Landing</text>
+  <text x="128" y="350" class="cardSub">Vercel + React + Vite</text>
+  <text x="128" y="385" class="body">- Conversion-focused funnel for inspector recruiting</text>
+  <text x="128" y="411" class="body">- Candidate intake modal</text>
+  <text x="128" y="437" class="body">- Supports call_now and schedule_call</text>
+  <text x="128" y="463" class="body">- Sends structured intake payload to Supabase</text>
 
-  <rect x="1262" y="224" width="218" height="180" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="1292" y="276" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Infobip</text>
-  <text x="1292" y="322" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">WhatsApp transport</text>
-  <text x="1292" y="356" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">Buttons, text, voice notes</text>
+  <rect x="104" y="554" width="256" height="214" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="128" y="592" class="cardTitle">Hiring Operator Channel</text>
+  <text x="128" y="618" class="cardSub">WhatsApp user experience</text>
+  <text x="128" y="653" class="body">- Deterministic menu and list navigation</text>
+  <text x="128" y="679" class="body">- Candidate selection by name, index, or phone</text>
+  <text x="128" y="705" class="body">- Voice note input for operator queries</text>
+  <text x="128" y="731" class="body">- Grounded summary, risk, compare, and phone lookups</text>
 
-  <rect x="474" y="726" width="1006" height="126" rx="22" fill="#17243A" stroke="#2D4469"/>
-  <text x="506" y="778" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Automated Dispatch</text>
-  <text x="506" y="820" fill="#D6E1F2" font-family="Arial, Helvetica, sans-serif" font-size="20">pg_cron + pg_net call dispatch-scheduled-interviews every minute, which promotes due draft interviews into live outbound calls.</text>
+  <rect x="104" y="832" width="256" height="172" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="128" y="870" class="cardTitle">Interaction Contract</text>
+  <text x="128" y="905" class="body">- Facts and navigation are deterministic</text>
+  <text x="128" y="931" class="body">- LLM is constrained to presentation and grounded Q&amp;A</text>
+  <text x="128" y="957" class="body">- No dashboard dependency for operators</text>
 
-  <path d="M392 314H446" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M806 314H860" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1180 314H1234" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1180 562H1234" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M392 562H446" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M640 652V700" stroke="#F6B73C" stroke-width="6" stroke-linecap="round"/>
+  <rect x="424" y="212" width="796" height="920" rx="22" fill="#0F172A" stroke="#243247"/>
+  <text x="452" y="250" class="section">Supabase Application and Data Plane</text>
 
-  <circle cx="446" cy="314" r="8" fill="#F6B73C"/>
-  <circle cx="860" cy="314" r="8" fill="#F6B73C"/>
-  <circle cx="1234" cy="314" r="8" fill="#F6B73C"/>
-  <circle cx="1234" cy="562" r="8" fill="#F6B73C"/>
-  <circle cx="446" cy="562" r="8" fill="#F6B73C"/>
-  <circle cx="640" cy="700" r="8" fill="#F6B73C"/>
+  <rect x="452" y="286" width="350" height="246" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="476" y="324" class="cardTitle">Intake and Call Orchestration</text>
+  <text x="476" y="350" class="cardSub">Edge Functions</text>
+  <text x="476" y="385" class="body">1. intake-inspection</text>
+  <text x="500" y="409" class="small">Validates landing payload, normalizes candidate identity,</text>
+  <text x="500" y="430" class="small">creates candidate and interview_session records.</text>
+  <text x="476" y="462" class="body">2. start-interview-call</text>
+  <text x="500" y="486" class="small">Starts immediate calls and due scheduled calls only when</text>
+  <text x="500" y="507" class="small">status = draft, track = inspection, and timing is valid.</text>
+
+  <rect x="846" y="286" width="346" height="246" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="870" y="324" class="cardTitle">Interview Processing Pipeline</text>
+  <text x="870" y="350" class="cardSub">Webhook-driven evaluation</text>
+  <text x="870" y="385" class="body">3. retell-webhook</text>
+  <text x="894" y="409" class="small">Receives call completion events and normalizes transcript payloads.</text>
+  <text x="870" y="441" class="body">4. extract-interview-data</text>
+  <text x="894" y="465" class="small">Extracts candidate identity and structured fields from transcript.</text>
+  <text x="870" y="497" class="body">5. build-inspection-intelligence</text>
+  <text x="894" y="521" class="small">Builds structured evaluation and fit signals for the inspection track.</text>
+
+  <rect x="452" y="574" width="350" height="238" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="476" y="612" class="cardTitle">Operational Console Runtime</text>
+  <text x="476" y="638" class="cardSub">WhatsApp adapter + shared orchestrator</text>
+  <text x="476" y="673" class="body">6. whatsapp-operator</text>
+  <text x="500" y="697" class="small">Infobip adapter for text, button, and audio payloads.</text>
+  <text x="476" y="729" class="body">7. hiring-operator-orchestrator</text>
+  <text x="500" y="753" class="small">Conversation state, deterministic queries, ranking, selection,</text>
+  <text x="500" y="774" class="small">and grounded candidate question answering.</text>
+
+  <rect x="846" y="574" width="346" height="238" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="870" y="612" class="cardTitle">Automation and Persistence Writers</text>
+  <text x="870" y="638" class="cardSub">Evaluation and scheduling control</text>
+  <text x="870" y="673" class="body">8. write-intelligence</text>
+  <text x="894" y="697" class="small">Persists candidate_intelligence, updates pipeline state, and</text>
+  <text x="894" y="718" class="small">synchronizes interview_session identity and intelligence snapshot.</text>
+  <text x="870" y="750" class="body">9. dispatch-scheduled-interviews</text>
+  <text x="894" y="774" class="small">Selects due draft schedule_call interviews and invokes</text>
+  <text x="894" y="795" class="small">start-interview-call on a one-minute cron cadence.</text>
+
+  <rect x="452" y="854" width="740" height="234" rx="18" fill="#111C2E" stroke="#31517E"/>
+  <text x="476" y="892" class="cardTitle">Primary Data Stores</text>
+  <text x="476" y="918" class="cardSub">Supabase Postgres</text>
+
+  <rect x="476" y="944" width="156" height="108" rx="14" fill="#0F172A" stroke="#274365"/>
+  <text x="496" y="978" class="body">candidate</text>
+  <text x="496" y="1002" class="small">Canonical person record,</text>
+  <text x="496" y="1022" class="small">track assignment, pipeline state.</text>
+
+  <rect x="652" y="944" width="182" height="108" rx="14" fill="#0F172A" stroke="#274365"/>
+  <text x="672" y="978" class="body">interview_session</text>
+  <text x="672" y="1002" class="small">Draft, calling, completed,</text>
+  <text x="672" y="1022" class="small">transcript, scheduled_at, B1 snapshot.</text>
+
+  <rect x="854" y="944" width="166" height="108" rx="14" fill="#0F172A" stroke="#274365"/>
+  <text x="874" y="978" class="body">candidate_intelligence</text>
+  <text x="874" y="1002" class="small">Structured evaluation,</text>
+  <text x="874" y="1022" class="small">signals, coverage, fit assessment.</text>
+
+  <rect x="1040" y="944" width="128" height="108" rx="14" fill="#0F172A" stroke="#274365"/>
+  <text x="1060" y="978" class="body">operator_state</text>
+  <text x="1060" y="1002" class="small">Selected interview,</text>
+  <text x="1060" y="1022" class="small">last state, list context.</text>
+
+  <rect x="476" y="1066" width="320" height="20" rx="10" fill="#0B1220"/>
+  <text x="482" y="1080" class="small">Physical tables: hiring_operator_conversation_state</text>
+  <rect x="816" y="1066" width="352" height="20" rx="10" fill="#0B1220"/>
+  <text x="822" y="1080" class="small">Audit: hiring_operator_inbound_events, hiring_operator_outbound_events</text>
+
+  <rect x="1256" y="212" width="468" height="920" rx="22" fill="#0F172A" stroke="#243247"/>
+  <text x="1284" y="250" class="section">External Services and Providers</text>
+
+  <rect x="1284" y="286" width="412" height="178" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="1308" y="324" class="cardTitle">Retell Voice Infrastructure</text>
+  <text x="1308" y="350" class="cardSub">Outbound calling provider</text>
+  <text x="1308" y="385" class="body">- Receives create-phone-call requests</text>
+  <text x="1308" y="411" class="body">- Places outbound candidate interviews</text>
+  <text x="1308" y="437" class="body">- Returns call completion payloads and transcript data</text>
+
+  <rect x="1284" y="506" width="412" height="178" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="1308" y="544" class="cardTitle">Infobip WhatsApp Transport</text>
+  <text x="1308" y="570" class="cardSub">Messaging provider</text>
+  <text x="1308" y="605" class="body">- Delivers inbound text, button, and audio messages</text>
+  <text x="1308" y="631" class="body">- Sends outbound menu, list, and report responses</text>
+  <text x="1308" y="657" class="body">- Provider-specific payload shape stays isolated here</text>
+
+  <rect x="1284" y="726" width="412" height="178" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="1308" y="764" class="cardTitle">OpenAI Models</text>
+  <text x="1308" y="790" class="cardSub">Transcription and grounded language generation</text>
+  <text x="1308" y="825" class="body">- Voice note transcription</text>
+  <text x="1308" y="851" class="body">- Candidate summaries, risks, comparisons, and Q&amp;A</text>
+  <text x="1308" y="877" class="body">- Constrained by transcript and structured intelligence context</text>
+
+  <rect x="1284" y="946" width="412" height="142" rx="18" fill="#162235" stroke="#30507E"/>
+  <text x="1308" y="984" class="cardTitle">Database Scheduler</text>
+  <text x="1308" y="1010" class="cardSub">pg_cron + pg_net inside Supabase</text>
+  <text x="1308" y="1045" class="body">- Invokes dispatch-scheduled-interviews every minute</text>
+  <text x="1308" y="1071" class="body">- Eliminates need for an external scheduler service</text>
+
+  <path d="M360 388H430" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M802 408H846" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M1018 408H1100C1160 408 1160 375 1220 375H1284" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+  <path d="M1488 464V500H1020V574" stroke="#34D399" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow-green)"/>
+
+  <path d="M360 661H430" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M1696 595H1730" stroke="#60A5FA" stroke-width="4"/>
+  <path d="M1284 595H1220C1160 595 1160 692 1192 692" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M1192 718H1248C1288 718 1288 815 1284 815" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+  <path d="M1284 841H1220C1170 841 1170 735 802 735" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+
+  <path d="M802 462V884" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M1018 532V574" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+  <path d="M1018 812V884" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M628 812V884" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <path d="M1490 946V918H1020V812" stroke="#F59E0B" stroke-width="4" stroke-dasharray="3 8" marker-end="url(#arrow-amber)"/>
+  <path d="M980 944V836" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M924 944V836" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M736 944V812" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M562 944V532" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <path d="M1072 944V812" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <path d="M1040 692H1120" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <rect x="889" y="542" width="106" height="26" rx="13" fill="#F59E0B"/>
+  <text x="908" y="560" class="label">AI chain</text>
+
+  <rect x="598" y="838" width="154" height="26" rx="13" fill="#60A5FA"/>
+  <text x="620" y="856" class="label">stateful writes</text>
+
+  <rect x="1510" y="468" width="126" height="26" rx="13" fill="#34D399"/>
+  <text x="1532" y="486" class="label">webhook</text>
+
+  <rect x="1392" y="908" width="202" height="26" rx="13" fill="#F59E0B"/>
+  <text x="1414" y="926" class="label">scheduled dispatch loop</text>
 </svg>
